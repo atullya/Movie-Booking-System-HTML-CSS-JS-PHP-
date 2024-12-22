@@ -30,7 +30,7 @@ $capacity_left = $capacity_left < 0 ? 0 : $capacity_left;
     <div id="wrapper">
         <!-- Sidebar -->
         <aside id="sidebar">
-            <div style="">
+            <div>
                 <img src="Images/logo12.png" height="110px" width="140px" style="margin: auto; margin-left:70px" alt="Logo" />
                 <h2 style="  text-align: center;">Admin Panel</h2>
             </div>
@@ -40,7 +40,7 @@ $capacity_left = $capacity_left < 0 ? 0 : $capacity_left;
                     <li><a href="adminhome.php"><i class="fa-solid fa-house " style="margin-right:12px"></i>Home</a></li>
                     <li><a href="adminupload.php" id="addMovieLink" style="margin-right:18px"> <i class="fa-solid fa-clapperboard"></i> Add Movies</a></li>
                     <li><a href="adminlistalluser.php" style="margin-right:18px"><i class="fa-solid fa-users"></i> List All Users</a></li>
-                    <li><a href="#logout"> <i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+                    <li><a href="adminlogout.php"> <i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
                 </ul>
             </nav>
         </aside>

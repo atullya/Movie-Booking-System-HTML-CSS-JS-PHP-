@@ -8,7 +8,8 @@ $showerror = false;
 $activeTab = 'skills'; // Default to SIGN IN tab
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    function allSet($fields) {
+    function allSet($fields)
+    {
         foreach ($fields as $field) {
             if (!isset($_POST[$field])) {
                 return false;
@@ -50,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "SELECT * FROM users WHERE email='$email'";
         $result = mysqli_query($conn, $sql);
 
-        if($email=='atulmzn1@gmail.com' && $password=='123'){
+        if ($email == 'atulmzn1@gmail.com' && $password == '123') {
             header("Location:adminhome.php");
         }
 
@@ -58,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $num = mysqli_num_rows($result);
             if ($num == 1) {
                 $row = mysqli_fetch_assoc($result);
-                
+
                 if (password_verify($password, $row['password'])) {
                     $_SESSION['loggedin'] = true;
                     $_SESSION['email'] = $email;
@@ -83,6 +84,7 @@ mysqli_close($conn);
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,9 +92,10 @@ mysqli_close($conn);
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="login.css">
 </head>
+
 <body class="body">
-    <?php 
-    if ($showerror) { 
+    <?php
+    if ($showerror) {
         echo '<div class="alert">
             <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> 
             <strong>Warning!</strong> ' . $showerror . '
@@ -109,7 +112,7 @@ mysqli_close($conn);
     <section id="header">
         <nav>
             <div class="logo">
-            <img src="Images/logo12.png"  alt="" />
+                <img src="Images/logo12.png" alt="" />
             </div>
             <ul>
                 <li><a href="index.php">Home</a></li>
@@ -134,7 +137,7 @@ mysqli_close($conn);
             <div class="tab-contents <?php echo $activeTab == 'skills' ? 'active-tab' : ''; ?>" id="skills">
                 <section id="sign">
                     <div class="container">
-                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" autocomplete="off">
                             <div class="input">
                                 <input type="email" placeholder="Email" name="email" required />
                                 <input type="password" placeholder="Password" name="password" required />
@@ -185,4 +188,5 @@ mysqli_close($conn);
         }
     </script>
 </body>
+
 </html>

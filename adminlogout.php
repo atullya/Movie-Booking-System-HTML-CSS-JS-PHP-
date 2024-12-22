@@ -12,7 +12,7 @@
 <body>
     <div id="wrapper">
         <!-- Sidebar -->
-        <aside id="sidebar" class="sid">
+        <aside id="sidebar">
             <div>
                 <img src="Images/logo12.png" height="110px" width="140px" style="margin: auto; margin-left:70px" alt="Logo" />
                 <h2 style="  text-align: center;">Admin Panel</h2>
@@ -28,64 +28,25 @@
         </aside>
 
         <!-- Main Content -->
-        <div id="main-content">
-            <h1>Admin Movie Management</h1>
-            <button id="loadMovies" class="custom-btn">Load Movies</button>
+        <div class="logout-container" style="margin: auto;">
+            <button style="
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff4d4f;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
+"
+                class="logout-btn" onclick="window.location.href='login.php'">
+                Logout
+            </button>
 
-            <div id="movieList"></div>
-
-            <h2 style="display: block; margin: 0 auto; text-align: center;">Add New Movie</h2>
-            <form id="movieForm" enctype="multipart/form-data">
-                <input type="text" value="Avatar: Fire and Ash" id="title" placeholder="Title" required><br>
-                <input type="text" value="3hr" id="duration" placeholder="Duration" required><br>
-                <input type="text" value="6:00 AM, 11:00 AM, 4:00PM" id="available_time" placeholder="Available Time (comma-separated)" required><br>
-                <input type="text" value="Adventure" id="genere" placeholder="Genre" required><br>
-                <textarea id="description" placeholder="Description" required>
-Avatar: Fire and Ash is an upcoming American epic science fiction film co-produced, co-edited, co-written, and directed by James Cameron
-</textarea>
-                <input type="text" value="James Cameron" id="director" placeholder="Director" required><br>
-                <input type="text" value="Sam Worthington, Zoe Saldana, Kate Winslet" id="cast" placeholder="Cast" required><br>
-                <input type="date" value="2025-12-01" id="releaseon" placeholder="Release Date" required><br>
-
-                <!-- Image File Upload -->
-                <input type="file" id="image" accept="image/*" required><br>
-                <img id="preview" style="  width: 300px;
-      height: 300px;
-      object-fit: cover;
-      border: 2px solid #ddd;
-      border-radius: 5px;
-      margin-top: 10px;
-      display: none;" alt="Image Preview">
-                <!-- Video File Upload -->
-                <input type="file" id="vid" accept="video/*" required><br>
-
-                <button type="submit" id="addMovieButton">Add Movie</button>
-            </form>
         </div>
     </div>
-    <script>
-        const imageInput = document.getElementById('image');
-        const preview = document.getElementById('preview');
-        document.getElementById("addMovieButton").addEventListener("click", function() {
-            setTimeout(function() {
-                alert("Movie has been added successfully!");
-            }, 3000);
-        });
-        imageInput.addEventListener('change', function(event) {
-            const file = event.target.files[0]; // Get the uploaded file
-            if (file) {
-                const reader = new FileReader(); // Create a FileReader to read the file
-                reader.onload = function(e) {
-                    preview.src = e.target.result; // Set the preview image source
-                    preview.style.display = 'block'; // Show the preview image
-                };
-                reader.readAsDataURL(file); // Read the file as a Data URL
-            } else {
-                preview.src = ''; // Clear the preview if no file is selected
-                preview.style.display = 'none';
-            }
-        });
-    </script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

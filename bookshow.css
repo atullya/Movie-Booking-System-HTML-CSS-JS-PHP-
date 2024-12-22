@@ -101,7 +101,11 @@ body {
 }
 .cell:nth-child(44) {
   
-  grid-column-end: 20;
+  grid-column: span -2;
+}
+.cell:nth-child(45) {
+  
+  grid-column-end: 1;
 }
 
 
@@ -120,6 +124,10 @@ body {
 .seat.sold {
   background-color: #9e9e9e; /* Sold seat color (grey) */
   cursor: not-allowed;
+}
+.yellow {
+  background-color: #FFC107; /* Booked seat color (red) */
+  cursor: not-allowed; /* Disable clicking */
 }
 .booked {
   background-color: #f44336; /* Booked seat color (red) */

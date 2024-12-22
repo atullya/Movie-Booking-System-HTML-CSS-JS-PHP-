@@ -4,6 +4,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+.body {
+  background-image: url("Images/bac.png");
+  background-size: cover; /* Cover the entire element */
+  height: 200vh;
+  width: 100%; /* Full width of the containing block */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+}
 
 .book-container {
   padding: 30px 70px;

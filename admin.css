@@ -21,8 +21,10 @@ p {
   background-color: #010431;
   color: white;
   padding: 20px;
+  height: 190vh;
   /* box-shadow: 2px 0 5px #010431; */
 }
+
 
 #sidebar h2 {
   text-align: center;

@@ -53,7 +53,7 @@ include('dbconnection.php');
           <section class="body">
             <div class="grid">
               <!-- Generate cells A1 to G17 -->
-              <div class="cell" id="A1">A1</div>
+              <div class="cell booked" id="A1">A1</div>
               <div class="cell" id="A2">A2</div>
               <div class="cell" id="A3">A3</div>
               <div class="cell" id="A4">A4</div>
@@ -99,16 +99,16 @@ include('dbconnection.php');
               
           
               <div class="cell" id="C10">C10</div>
-              <div class="cell" id="C11">C11</div>
-              <div class="cell" id="C12">C12</div>
-              <div class="cell" id="C13">C13</div>
+              <div class="cell booked" id="C11">C11</div>
+              <div class="cell booked" id="C12">C12</div>
+              <div class="cell booked" id="C13">C13</div>
               <div class="cell" id="C14">C14</div>
               <div class="cell" id="C15">C15</div>
               <div class="cell" id="C16">C16</div>
               <div class="cell" id="C17">C17</div>
               <div class="cell" id="D1">D1</div>
-              <div class="cell" id="D2">D2</div>
-              <div class="cell" id="D3">D3</div>
+              <div class="cell yellow" id="D2">D2</div>
+              <div class="cell yellow" id="D3">D3</div>
               <div class="cell" id="D4">D4</div>
               <div class="cell" id="D5">D5</div>
               <div class="cell" id="D6">D6</div>
@@ -116,9 +116,9 @@ include('dbconnection.php');
               <div class="cell" id="D8">D8</div>
               <div class="cell" id="D9">D9</div>
               <div class="cell" id="D10">D10</div>
-              <div class="cell" id="D11">D11</div>
-              <div class="cell" id="D12">D12</div>
-              <div class="cell" id="D13">D13</div>
+              <div class="cell booked" id="D11">D11</div>
+              <div class="cell booked" id="D12">D12</div>
+              <div class="cell booked" id="D13">D13</div>
               <div class="cell" id="D14">D14</div>
               <div class="cell" id="D15">D15</div>
               <div class="cell" id="D16">D16</div>
@@ -159,21 +159,21 @@ include('dbconnection.php');
               <div class="cell" id="F17">F17</div>
               <div class="cell" id="G1">G1</div>
               <div class="cell" id="G2">G2</div>
-              <div class="cell" id="G3">G3</div>
-              <div class="cell" id="G4">G4</div>
+              <div class="cell yellow" id="G3">G3</div>
+              <div class="cell yellow" id="G4">G4</div>
               <div class="cell" id="G5">G5</div>
               <div class="cell" id="G6">G6</div>
-              <div class="cell" id="G7">G7</div>
+              <div class="cell yellow" id="G7">G7</div>
               <div class="cell" id="G8">G8</div>
               <div class="cell" id="G9">G9</div>
-              <div class="cell" id="G10">G10</div>
-              <div class="cell" id="G11">G11</div>
-              <div class="cell" id="G12">G12</div>
+              <div class="cell yellow" id="G10">G10</div>
+              <div class="cell yellow" id="G11">G11</div>
+              <div class="cell yellow" id="G12">G12</div>
               <div class="cell" id="G13">G13</div>
-              <div class="cell" id="G14">G14</div>
-              <div class="cell" id="G15">G15</div>
-              <div class="cell" id="G16">G16</div>
-              <div class="cell" id="G17">G17</div>
+              <div class="cell booked" id="G14">G14</div>
+              <div class="cell booked" id="G15">G15</div>
+              <div class="cell booked" id="G16">G16</div>
+              <div class="cell booked" id="G17">G17</div>
             </div>
           </section>
             <div class="screen">SCREEN</div>

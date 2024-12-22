@@ -72,7 +72,7 @@ $result = mysqli_query($conn, $query);
                     <li><a href="adminhome.php"><i class="fa-solid fa-house " style="margin-right:12px"></i>Home</a></li>
                     <li><a href="adminupload.php" id="addMovieLink" style="margin-right:18px"> <i class="fa-solid fa-clapperboard"></i> Add Movies</a></li>
                     <li><a href="adminlistalluser.php" style="margin-right:18px"><i class="fa-solid fa-users"></i> List All Users</a></li>
-                    <li><a href="#logout"> <i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+                    <li><a href="adminlogout.php"> <i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
                 </ul>
             </nav>
         </aside>

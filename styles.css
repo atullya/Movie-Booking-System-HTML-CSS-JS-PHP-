@@ -457,7 +457,10 @@ nav .after .icon {
 }
 
 /* Detail Page*/
-
+.fimage{
+  width: 600px;
+  height: 200px;
+}
 .body {
   background-image: url("Images/background.jpeg");
   background-size: cover; /* Cover the entire element */

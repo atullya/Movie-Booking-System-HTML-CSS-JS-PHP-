@@ -154,7 +154,7 @@ if (isset($_GET['logout'])) {
       <div id="carousel1"></div>
     </section>
 
-    <footer>
+    <!-- <footer>
       <div class="col1">
         <div class="col1-img">
           <img src="Images/logo12.png" alt="" />
@@ -220,7 +220,7 @@ if (isset($_GET['logout'])) {
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </section>
 
   <div id="trailerModal" class="modal">
@@ -263,11 +263,11 @@ if (isset($_GET['logout'])) {
 
         content += `
       <div class="movies">
-        <img src="${imageUrl}" alt="${element.title}">
+        <img src="${imageUrl}" alt="${element.title}" class="fimage">
         <p class="title">${element.title}</p>
         <p class="duration">${element.duration}</p>
-            <p class="showtimes">
-                    <ul>${showTime(element.available_time)}</ul>
+            <p style="color:white">
+                    ${element.genere}
                 </p>
         <div class="layer">
           <button class="btn" onclick="trailer(event,${element.vid})">Trailer</button>

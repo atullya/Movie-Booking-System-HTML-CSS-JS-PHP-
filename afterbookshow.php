@@ -10,21 +10,21 @@ include('dbconnection.php');
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Booking</title>
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link rel="stylesheet" href="bookshow.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="bookshow.css" />
 </head>
 
 <body>
-    <?php
-    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-        header("Location: login.php");
-    } else {
-        echo '<div class="title-div"></div>
+  <?php
+  if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: login.php");
+  } else {
+    echo '<div class="title-div"></div>
           <div class="mid-div">
             <p class="childrenn">
               Children above 3 Feet will require a separate ticket
@@ -53,7 +53,7 @@ include('dbconnection.php');
           <section class="body">
             <div class="grid">
               <!-- Generate cells A1 to G17 -->
-              <div class="cell" id="A1">A1</div>
+              <div class="cell booked" id="A1">A1</div>
               <div class="cell" id="A2">A2</div>
               <div class="cell" id="A3">A3</div>
               <div class="cell" id="A4">A4</div>
@@ -83,10 +83,10 @@ include('dbconnection.php');
               <div class="cell" id="B11">B11</div>
               <div class="cell" id="B12">B12</div>
               <div class="cell" id="B13">B13</div>
-              <div class="cell booked" id="B14">B14</div>
-              <div class="cell booked" id="B15">B15</div>
-              <div class="cell booked" id="B16">B16</div>
-              <div class="cell booked" id="B17">B17</div>
+              <div class="cell booked" id="B14 ">B14</div>
+              <div class="cell booked" id="B15 ">B15</div>
+              <div class="cell booked" id="B16 ">B16</div>
+              <div class="cell booked" id="B17 ">B17</div>
               <div class="cell" id="C1">C1</div>
               <div class="cell" id="C2">C2</div>
               <div class="cell" id="C3">C3</div>
@@ -99,16 +99,16 @@ include('dbconnection.php');
               
           
               <div class="cell" id="C10">C10</div>
-              <div class="cell" id="C11">C11</div>
-              <div class="cell" id="C12">C12</div>
-              <div class="cell" id="C13">C13</div>
+              <div class="cell booked" id="C11">C11</div>
+              <div class="cell booked" id="C12">C12</div>
+              <div class="cell booked" id="C13">C13</div>
               <div class="cell" id="C14">C14</div>
               <div class="cell" id="C15">C15</div>
               <div class="cell" id="C16">C16</div>
               <div class="cell" id="C17">C17</div>
               <div class="cell" id="D1">D1</div>
-              <div class="cell" id="D2">D2</div>
-              <div class="cell" id="D3">D3</div>
+              <div class="cell yellow" id="D2">D2</div>
+              <div class="cell yellow" id="D3">D3</div>
               <div class="cell" id="D4">D4</div>
               <div class="cell" id="D5">D5</div>
               <div class="cell" id="D6">D6</div>
@@ -116,9 +116,9 @@ include('dbconnection.php');
               <div class="cell" id="D8">D8</div>
               <div class="cell" id="D9">D9</div>
               <div class="cell" id="D10">D10</div>
-              <div class="cell" id="D11">D11</div>
-              <div class="cell" id="D12">D12</div>
-              <div class="cell" id="D13">D13</div>
+              <div class="cell booked" id="D11">D11</div>
+              <div class="cell booked" id="D12">D12</div>
+              <div class="cell booked" id="D13">D13</div>
               <div class="cell" id="D14">D14</div>
               <div class="cell" id="D15">D15</div>
               <div class="cell" id="D16">D16</div>
@@ -159,21 +159,21 @@ include('dbconnection.php');
               <div class="cell" id="F17">F17</div>
               <div class="cell" id="G1">G1</div>
               <div class="cell" id="G2">G2</div>
-              <div class="cell" id="G3">G3</div>
-              <div class="cell" id="G4">G4</div>
+              <div class="cell yellow" id="G3">G3</div>
+              <div class="cell yellow" id="G4">G4</div>
               <div class="cell" id="G5">G5</div>
               <div class="cell" id="G6">G6</div>
-              <div class="cell" id="G7">G7</div>
+              <div class="cell yellow" id="G7">G7</div>
               <div class="cell" id="G8">G8</div>
               <div class="cell" id="G9">G9</div>
-              <div class="cell" id="G10">G10</div>
-              <div class="cell" id="G11">G11</div>
-              <div class="cell" id="G12">G12</div>
+              <div class="cell yellow" id="G10">G10</div>
+              <div class="cell yellow" id="G11">G11</div>
+              <div class="cell yellow" id="G12">G12</div>
               <div class="cell" id="G13">G13</div>
-              <div class="cell" id="G14">G14</div>
-              <div class="cell" id="G15">G15</div>
-              <div class="cell" id="G16">G16</div>
-              <div class="cell" id="G17">G17</div>
+              <div class="cell booked" id="G14">G14</div>
+              <div class="cell booked" id="G15">G15</div>
+              <div class="cell booked" id="G16">G16</div>
+              <div class="cell booked" id="G17">G17</div>
             </div>
           </section>
             <div class="screen">SCREEN</div>
@@ -195,121 +195,121 @@ include('dbconnection.php');
             <button id="proc" onclick="proceedbtn()">Proceed</button>
             <button id="showbtn">Book</button>
           </section>';
+  }
+  ?>
+
+
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
     }
-    ?>
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+  </script>
+  <script>
+    let getbookdata = localStorage.getItem("bookdetail");
+    let parsebookdata = JSON.parse(getbookdata);
+    console.log(parsebookdata);
 
 
-    <script>
-        function openForm() {
-            document.getElementById("myForm").style.display = "block";
-        }
+    const date = new Date();
 
-        function closeForm() {
-            document.getElementById("myForm").style.display = "none";
-        }
-    </script>
-    <script>
-        let getbookdata = localStorage.getItem("bookdetail");
-        let parsebookdata = JSON.parse(getbookdata);
-        console.log(parsebookdata);
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
 
-
-        const date = new Date();
-
-        let day = date.getDate();
-        let month = date.getMonth() + 1;
-        let year = date.getFullYear();
-
-        // This arrangement can be altered based on how we want the date's format to appear.
-        let currentDate = `${year}-${month}-${day}`;
-        console.log(currentDate);
-        let heading = document.querySelector(".title-div");
-        let content = "";
-        content = `
+    // This arrangement can be altered based on how we want the date's format to appear.
+    let currentDate = `${year}-${month}-${day}`;
+    console.log(currentDate);
+    let heading = document.querySelector(".title-div");
+    let content = "";
+    content = `
             <h2>${parsebookdata.moviename}</h2>
             <p>Cine Nepal Cineplex > Audi -1  ${currentDate}  <span class="set"> ${parsebookdata.time}<span></p>
             `;
-        heading.innerHTML = content;
-        // Get all elements with the class 'cell'
-        const cells = document.querySelectorAll(".grid .cell");
-        let selectedCount = 0; // Track the number of selected cells
-        let showbtn = document.getElementById('showbtn');
-        if (selectedCount > 0) {
-            showbtn.style.display = "block";
-        } else {
-            showbtn.style.display = "none";
-        }
-        let selectedSeats = []
+    heading.innerHTML = content;
+    // Get all elements with the class 'cell'
+    const cells = document.querySelectorAll(".grid .cell");
+    let selectedCount = 0; // Track the number of selected cells
+    let showbtn = document.getElementById('showbtn');
+    if (selectedCount > 0) {
+      showbtn.style.display = "block";
+    } else {
+      showbtn.style.display = "none";
+    }
+    let selectedSeats = []
 
-        function proceedbtn() {
-            let finalData = {
-                movieName: parsebookdata.moviename,
-                movieTime: parsebookdata.time,
-                selectedSeat: selectedSeats,
-                totalPrice: sum
-            }
-            if (selectedSeats.length == 0) {
-                alert("Please select a seat first");
-                return;
-            }
-            localStorage.setItem("finalData", JSON.stringify(finalData));
-            window.location.assign("esewa.php");
+    function proceedbtn() {
+      let finalData = {
+        movieName: parsebookdata.moviename,
+        movieTime: parsebookdata.time,
+        selectedSeat: selectedSeats,
+        totalPrice: sum
+      }
+      if (selectedSeats.length == 0) {
+        alert("Please select a seat first");
+        return;
+      }
+      localStorage.setItem("finalData", JSON.stringify(finalData));
+      window.location.assign("esewa.php");
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+      const showbtn = document.getElementById("showbtn");
+      showbtn.style.display = "none"; // Hide initially if no seats are selected
+    });
+
+    cells.forEach((cell) => {
+      cell.addEventListener("click", function() {
+
+        if (!selectedSeats.includes(cell.id)) {
+          selectedSeats.push(cell.id)
         }
-        document.addEventListener("DOMContentLoaded", function() {
-            const showbtn = document.getElementById("showbtn");
-            showbtn.style.display = "none"; // Hide initially if no seats are selected
-        });
+        checkbook(cell.id);
+        console.log(cell.id);
+      });
+    });
+
+    let sum = 0;
+
+    function checkbook(cellId) {
+      const cell = document.getElementById(cellId);
+      let total1 = document.getElementById("showsum");
+      // Check if the cell is already selected (background color is green)
+      if (cell.style.backgroundColor === "rgb(76, 175, 80)") {
+        // If selected, reset the color and decrement the selected count
+        cell.style.backgroundColor = ""; // Reset to default
+        cell.style.border = ""; // Reset to default
+        selectedCount--;
+        if (sum >= 200) {
+          sum = sum - 200;
+        }
+      } else {
+        // If the cell is not selected and the limit is not reached, select it
+        if (selectedCount < 10) {
+          sum = sum + 200;
+          cell.style.backgroundColor = "#4CAF50"; // Set to green
+          cell.style.border = "#4CAF50"; // Set to green
+          selectedCount++;
+        }
+      }
+      total1.innerHTML = sum;
+
+      // Disable further selection if the limit is reached
+      if (selectedCount >= 10) {
+        document.getElementById("myForm").style.display = "block";
 
         cells.forEach((cell) => {
-            cell.addEventListener("click", function() {
-
-                if (!selectedSeats.includes(cell.id)) {
-                    selectedSeats.push(cell.id)
-                }
-                checkbook(cell.id);
-                console.log(cell.id);
+          if (cell.style.backgroundColor !== "rgb(76, 175, 80)") {
+            cell.removeEventListener("click", function() {
+              checkbook(cell.id);
             });
+          }
         });
-
-        let sum = 0;
-
-        function checkbook(cellId) {
-            const cell = document.getElementById(cellId);
-            let total1 = document.getElementById("showsum");
-            // Check if the cell is already selected (background color is green)
-            if (cell.style.backgroundColor === "rgb(76, 175, 80)") {
-                // If selected, reset the color and decrement the selected count
-                cell.style.backgroundColor = ""; // Reset to default
-                cell.style.border = ""; // Reset to default
-                selectedCount--;
-                if (sum >= 200) {
-                    sum = sum - 200;
-                }
-            } else {
-                // If the cell is not selected and the limit is not reached, select it
-                if (selectedCount < 10) {
-                    sum = sum + 200;
-                    cell.style.backgroundColor = "#4CAF50"; // Set to green
-                    cell.style.border = "#4CAF50"; // Set to green
-                    selectedCount++;
-                }
-            }
-            total1.innerHTML = sum;
-
-            // Disable further selection if the limit is reached
-            if (selectedCount >= 10) {
-                document.getElementById("myForm").style.display = "block";
-
-                cells.forEach((cell) => {
-                    if (cell.style.backgroundColor !== "rgb(76, 175, 80)") {
-                        cell.removeEventListener("click", function() {
-                            checkbook(cell.id);
-                        });
-                    }
-                });
-            }
-        }
-    </script>
+      }
+    }
+  </script>
 </body>
 
 </html>

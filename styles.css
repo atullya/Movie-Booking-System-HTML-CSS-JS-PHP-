@@ -241,7 +241,7 @@ nav .after .icon {
 /*Hero*/
 
 #hero {
-  background-image: url("Images/background.jpeg");
+  background-image: url("Images/bac.png");
   background-size: cover; /* Cover the entire element */
   height: 370vh; /* Full viewport height */
   width: 100%; /* Full width of the containing block */

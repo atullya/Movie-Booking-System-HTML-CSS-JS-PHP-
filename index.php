@@ -235,9 +235,9 @@ if (isset($_GET['logout'])) {
     let apiData = [];
     async function getApiData() {
       try {
-        let res = await fetch("http://localhost/ranjana/RestAPI.php")
+        let res = await fetch("http://localhost/ranjana/clone/RestAPI.php")
         let data1 = await res.json();
-        console.log(data1);
+        console.log("data", data1);
         apiData = data1;
         displayApiData(data1)
 
@@ -266,6 +266,9 @@ if (isset($_GET['logout'])) {
         <img src="${imageUrl}" alt="${element.title}">
         <p class="title">${element.title}</p>
         <p class="duration">${element.duration}</p>
+            <p class="showtimes">
+                    <ul>${showTime(element.available_time)}</ul>
+                </p>
         <div class="layer">
           <button class="btn" onclick="trailer(event,${element.vid})">Trailer</button>
           <button class="btn" onclick="detail(event, ${index})">Buy Now</button>

@@ -35,7 +35,9 @@ if (isset($_GET['logout'])) {
       echo '
             <nav>
                 <div class="logo">
-                    <img src="Images/logo12.png"  alt="" />
+                   <a href="index.php">
+                      <img src="Images/logo12.png"  alt="" />
+                      </a>
                 </div>
                 <ul>
                     <li class="active"><a href="index.php">Home</a></li>
@@ -50,7 +52,9 @@ if (isset($_GET['logout'])) {
       echo '
             <nav>
                 <div class="logo">
-                       <img src="Images/logo12.png"  alt="" />
+                <a href="index.php">
+                      <img src="Images/logo12.png"  alt="" />
+                      </a>
                 </div>
                 <ul>
                     <li class="active"><a href="index.php">Home</a></li>

@@ -10,6 +10,7 @@ nav {
   color: white;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 nav .logo {
   margin-left: 40px;

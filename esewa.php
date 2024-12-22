@@ -181,7 +181,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <div class="det11">
 <h3 class="mov">Date</h3>
-<p class="nam">${Date.now()}</p>
+<p class="nam1"></p>
     </div>
 
     <div class="det11">
@@ -198,7 +198,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         show.innerHTML = content;
         document.getElementById("amount").value = parsebookdata.totalPrice;
         document.getElementById("amount1").value = parsebookdata.totalPrice;
-
+        const date = new Date();
+        const formattedDate = `${date.getFullYear()}/${String(date.getMonth() + 1).padStart(2, '0')}/${String(date.getDate()).padStart(2, '0')}`;
+        document.querySelector('.nam1').textContent = formattedDate;
     }
 
     function showSelectedSeat(seats) {

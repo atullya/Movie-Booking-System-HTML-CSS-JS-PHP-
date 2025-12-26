@@ -52,7 +52,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Load movies from the backend API
             document.getElementById('loadMovies').addEventListener('click', () => {
-                fetch('http://localhost/ranjana/clone/RestAPI.php')
+                fetch('https://moviewatch-atullyamzn.42web.io/movie/unzipit/movie/RestAPI.php')
                     .then(response => response.json())
                     .then(data => {
                         const movieList = document.getElementById('movieList');
@@ -75,7 +75,7 @@
 
             // Function to delete a movie
             window.deleteMovie = function(id) {
-                fetch(`http://localhost/ranjana/clone/RestAPI.php?id=${id}`, {
+                fetch(`https://moviewatch-atullyamzn.42web.io/movie/unzipit/movie//RestAPI.php?id=${id}`, {
                         method: 'DELETE'
                     })
                     .then(response => response.json())
@@ -123,7 +123,7 @@
                 formData.append('vid', vid);
 
                 // Send form data to the backend
-                fetch('http://localhost/ranjana/clone/RestAPI.php', {
+                fetch('https://moviewatch-atullyamzn.42web.io/movie/unzipit/movie/RestAPI.php', {
                         method: 'POST',
                         body: formData
                     })

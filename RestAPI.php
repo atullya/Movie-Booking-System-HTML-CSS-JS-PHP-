@@ -5,23 +5,19 @@ header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Methods, Authorization");
 
 // Database configuration
-$host = "localhost";
-$username = "root"; // Replace with your MySQL username
-$password = "";     // Replace with your MySQL password
+$host = "sql207.infinityfree.com";
+$username = "if0_40764182";
+$password = "W2TyvlO7PEmE";
 $dbname = "ranjana";
 
-// Create a connection to the database
 $conn = new mysqli($host, $username, $password, $dbname);
 
-// Check for database connection errors
 if ($conn->connect_error) {
     die(json_encode(["status" => "error", "message" => "Connection failed: " . $conn->connect_error]));
 }
 
-// Get the HTTP request method (GET, POST, PUT, DELETE)
 $method = $_SERVER['REQUEST_METHOD'];
 
-// Handle the incoming request
 switch ($method) {
     case 'GET': // Fetch movies
         if (isset($_GET['id'])) {

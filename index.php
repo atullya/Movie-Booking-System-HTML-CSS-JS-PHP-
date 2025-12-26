@@ -235,7 +235,7 @@ if (isset($_GET['logout'])) {
     let apiData = [];
     async function getApiData() {
       try {
-        let res = await fetch("http://localhost/ranjana/clone/RestAPI.php")
+        let res = await fetch("http://localhost/movie/RestAPI.php")
         let data1 = await res.json();
         console.log("data", data1);
         apiData = data1;

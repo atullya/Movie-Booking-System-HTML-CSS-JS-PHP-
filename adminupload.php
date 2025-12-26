@@ -91,7 +91,7 @@ Avatar: Fire and Ash is an upcoming American epic science fiction film co-produc
         document.addEventListener('DOMContentLoaded', function() {
             // Load movies from the backend API
             document.getElementById('loadMovies').addEventListener('click', () => {
-                fetch('http://localhost/ranjana/clone/RestAPI.php')
+                fetch('http://localhost/movie/RestAPI.php')
                     .then(response => response.json())
                     .then(data => {
                         const movieList = document.getElementById('movieList');
@@ -114,7 +114,7 @@ Avatar: Fire and Ash is an upcoming American epic science fiction film co-produc
 
             // Function to delete a movie
             window.deleteMovie = function(id) {
-                fetch(`http://localhost/ranjana/clone/RestAPI.php?id=${id}`, {
+                fetch(`http://localhost/movie/RestAPI.php?id=${id}`, {
                         method: 'DELETE'
                     })
                     .then(response => response.json())
@@ -162,7 +162,7 @@ Avatar: Fire and Ash is an upcoming American epic science fiction film co-produc
                 formData.append('vid', vid);
 
                 // Send form data to the backend
-                fetch('http://localhost/ranjana/clone/RestAPI.php', {
+                fetch('http://localhost/movie/RestAPI.php', {
                         method: 'POST',
                         body: formData
                     })

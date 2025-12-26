@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // eSewa Configuration
     $merchantCode = "EPAYTEST"; // Replace with your actual merchant code
     $secretKey = "8gBm/:&EnhH.1/q"; // Replace with your actual secret key
-    $successUrl = "http://localhost/ranjana/clone/afterbookshow.php"; // Replace with your success URL
+    $successUrl = "https://moviewatch-atullyamzn.42web.io/movie/unzipit/movie/afterbookshow.php"; // Replace with your success URL
     $failureUrl = "http://yourdomain.com/payment-failure"; // Replace with your failure URL
     $transactionUuid = uniqid("txn-", true); // Unique identifier for the transaction
 

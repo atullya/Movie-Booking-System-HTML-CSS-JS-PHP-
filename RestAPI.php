@@ -5,10 +5,10 @@ header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Methods, Authorization");
 
 // Database configuration
-$host = "sql207.infinityfree.com";
-$username = "if0_40764182";
-$password = "W2TyvlO7PEmE";
-$dbname = "ranjana";
+$host = "";
+$username = "";
+$password = "";
+$dbname = "";
 
 $conn = new mysqli($host, $username, $password, $dbname);
 
